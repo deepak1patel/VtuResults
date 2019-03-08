@@ -58,6 +58,7 @@ def haveToCall(u):
         options.get("http://results.vtu.ac.in/resultsvitavicbcs_19/index.php")
         boxusn = options.find_element_by_name("lns")
         print("Enter USN")
+        # usn = input()
         usn ="1bo16is0"+str(u)
         boxusn.send_keys(usn)
         print("enter captcha number carefully")
@@ -67,8 +68,8 @@ def haveToCall(u):
         submit = options.find_element_by_id("submit")
         submit.click()
         sub = [] #empty list
-        # smaple = input()
-        time.sleep(1)
+        smaple = input()
+        # time.sleep(2)
         html = options.page_source
         # print(html)
         soup = BeautifulSoup(html,'html.parser')
@@ -105,3 +106,5 @@ def haveToCall(u):
     except:
         print("Something has Happened \n Try again ")
         options.quit()
+
+# haveToCall()
